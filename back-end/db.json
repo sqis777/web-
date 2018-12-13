@@ -1,0 +1,43 @@
+{
+    "Users": [
+        {
+            "id": "000001",
+            "username": "test1",
+            "password": "12345678",
+            "age": 12,
+            "gender": "man",
+            "department": "administration",
+            "position": "company",
+            "remain_annual_leave": 5,
+            "annual_leave_length": 10
+        },
+        {
+            "id": "000002",
+            "username": "test1",
+            "password": "12345678",
+            "age": 12,
+            "gender": "man",
+            "department": "administration",
+            "position": "company",
+            "remain_annual_leave": 5,
+            "annual_leave_length": 10
+        }
+    ],
+    "LeaveRequests": [
+        {
+            "id": "000001",
+            "userId": "000001",
+            "days": 4,
+            "state": 1
+        }
+    ],
+    "Records": [
+        {
+            "id": "000001",
+            "userId": "000001",
+            "inTime": "",
+            "outTime": "",
+            "isLate": false
+        }
+    ]
+}
