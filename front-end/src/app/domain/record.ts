@@ -1,7 +1,7 @@
 export class Record {
     id: number;
     userId: number;
-    inTime: string;
-    outTime: string;
+    time: string;
+    mood: string;
     isLate: boolean;
 }
