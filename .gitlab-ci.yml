@@ -11,7 +11,7 @@ pages:
     - npm install
     - npm install -g @angular/cli
     - ng build --aot
-    - mkdir ./public
+    - mkdir public
     - mv ./dist/front-end/* ./public
   artifacts:
     paths:
