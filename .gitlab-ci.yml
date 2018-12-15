@@ -10,7 +10,7 @@ pages:
     - cd front-end
     - npm install
     - npm install -g @angular/cli
-    - ng build -aot
+    - ng build --aot
     - mv ./dist/* ./public
   artifacts:
     paths:
