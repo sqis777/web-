@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClockPageComponent } from './pages/clock-page/clock-page.component';
 import { GooutPageComponent } from './pages/goout-page/goout-page.component';

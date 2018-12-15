@@ -1,5 +1,5 @@
 /**
- * @description 外出记录实体类
+ * @description 外出申请记录实体类
  * @author Wu Kexin
  * @date 2018-12-15
  * @export
@@ -8,7 +8,8 @@
 export class Out {
     id: number;
     userId: number;
-    days: number;
+    startTime: Date;
+    endTime: Date;
     state: number; // 此条申请的状态，1 -> 已提交，未审批， 2 -> 已审批
     reason: string;
 }

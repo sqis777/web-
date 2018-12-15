@@ -21,14 +21,16 @@ export class GooutPageComponent implements OnInit {
       {
         id: 1,
         userId: 1,
-        days: 1,
+        startTime: new Date(),
+        endTime: new Date(),
         state: 1,
         reason: "出差调研，参观火星人民的生活状况。"
       },
       {
         id: 2,
         userId: 1,
-        days: 2,
+        startTime: new Date(),
+        endTime: new Date(),
         state: 2,
         reason: "出差调研，参观火星人民的生活状况。"
       }
