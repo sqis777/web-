@@ -9,8 +9,7 @@ import { tap, delay } from 'rxjs/operators';
 export class AuthService {
   isLoggedIn = false;
 
-  // store the URL so we can redirect after logging in
-  redirectUrl: string;
+  redirectUrl: string;  //登陆成功后访问的路径
 
   login(): Observable<boolean> {
     return of(true).pipe(

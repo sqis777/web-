@@ -1,3 +1,36 @@
-<p>
-  login works!
-</p>
+<div class="login-container">
+  <div nz-row>
+    <div nz-col [nzXs]="{span: 20, offset: 2}" [nzSm]="{span: 16, offset: 4}" [nzMd]="{span: 14, offset: 5}" [nzLg]="{span: 10, offset: 7}"
+      [nzXl]="{span: 8, offset: 8}">
+      <nz-card>
+        <div class="login-form-item">
+          <div class="login-form-title">
+            登陆
+          </div>
+        </div>
+        <div class="login-form-item">
+          <span nz-tooltip [nzVisible]="usernameError" [nzTitle]="usernameErrorMessage" nzTrigger="focus">
+            <nz-input-group nzAddOnBefore="用户名">
+              <input type="text" nz-input [(ngModel)]="username">
+            </nz-input-group>
+          </span>
+        </div>
+        <div class="login-form-item">
+          <nz-input-group nzAddOnBefore="密码">
+            <input type="text" nz-input type="password" [(ngModel)]="password">
+          </nz-input-group>
+        </div>
+        <div class="login-form-item">
+          <label nz-checkbox [(ngModel)]="rememberLogin">在此设备上记住我</label>
+        </div>
+        <div class="login-form-item">
+          <button nz-button nzType="primary" nzBlock (click)="login()">登陆</button>
+        </div>
+        <div class="login-form-item">
+          <a class="forget-password">忘记密码</a>
+          <a class="register">点我注册</a>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>
