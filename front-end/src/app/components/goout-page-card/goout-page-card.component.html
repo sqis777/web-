@@ -1,6 +1,6 @@
 <nz-card style="margin-top: 10px; width:100%;">
   <p>申请编号: {{out.id}}</p>
-  <p>用户工号: {{out.usrId}}</p>
+  <p>用户工号: {{out.userId}}</p>
   <p *ngIf="out.state === 1">当前状态: 待审批</p>
   <p *ngIf="out.state === 2">当前状态: 已审批</p>
   <p>外出原因: {{out.reason}}</p>
