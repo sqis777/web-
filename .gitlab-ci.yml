@@ -9,7 +9,7 @@ pages:
   script:
     - cd front-end
     - npm install
-    - npm install -g angular/cli
+    - npm install -g @angular/cli
     - ng build -aot
     - mv ./dist/* ./public
   artifacts:
