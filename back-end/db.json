@@ -28,15 +28,16 @@
             "id": "000001",
             "userId": "000001",
             "days": 4,
-            "state": 1
+            "state": 1,
+            "reason": "生病了，必须请假，不请假会死的",
         }
     ],
     "Records": [
         {
             "id": "000001",
             "userId": "000001",
-            "inTime": "",
-            "outTime": "",
+            "time": "",
+            "mood": "高兴",
             "isLate": false
         }
     ]
