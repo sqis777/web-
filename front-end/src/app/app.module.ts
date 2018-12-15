@@ -18,6 +18,7 @@ import { GooutPageCardComponent } from './components/goout-page-card/goout-page-
 import { NewOutComponent } from './components/new-out/new-out.component';
 import { NewLeaveComponent } from './components/new-leave/new-leave.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
 
 registerLocaleData(zh);
 
@@ -32,7 +33,8 @@ registerLocaleData(zh);
     GooutPageCardComponent,
     NewOutComponent,
     NewLeaveComponent,
-    FooterComponent
+    FooterComponent,
+    AnnualPageComponent
   ],
   imports: [
     BrowserModule,
