@@ -8,13 +8,36 @@ import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
 import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
-  { path: 'clock', component: ClockPageComponent },
-  { path: 'goout', component: GooutPageComponent },
-  { path: 'leave', component: LeavePageComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'annual', component: AnnualPageComponent},
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', component: LoginComponent},
+  {
+    path: 'clock',
+    canActivate: [AuthGuard],
+    component: ClockPageComponent
+  },
+  {
+    path: 'goout',
+    component: GooutPageComponent
+  },
+  {
+    path: 'leave',
+    component: LeavePageComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'annual',
+    component: AnnualPageComponent
+  },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: LoginComponent
+  },
 ];
 
 @NgModule({
