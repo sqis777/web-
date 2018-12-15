@@ -1,28 +1,33 @@
-<div class="app-sub-navbar">
+<div class="app-clock">
+
   <nz-tabset>
     <nz-tab nzTitle="操作">
       <div class="operationTab">
+        <nz-input-group>
+        </nz-input-group>
+        <nz-input-group nzAddOnBefore="你的心情">
+          <input type="text" nz-input [(ngModel)]="mood">
+        </nz-input-group>
         <button nz-button nzType="primary">上班打卡</button>
         <button nz-button nzType="primary">下班打卡</button>
         <p class="operationTips">上班时请点击上班打卡，下班时请点击下班打卡。</p>
       </div>
     </nz-tab>
   </nz-tabset>
+
   <nz-tabset>
     <nz-tab nzTitle="记录">
       <div class="recordTab">
         <nz-timeline nzMode="alternate">
           <nz-timeline-item *ngFor="let record of records">
             <nz-card>
-                <p>你在 <span class="record-time">{{record.time}}</span>打卡。</p>
-                <p>当时你的心情是<span class="record-mood">{{record.mood}}</span>。</p>
+              <p>你在 <span class="record-time">{{record.time}}</span>打卡。</p>
+              <p>当时你的心情是<span class="record-mood">{{record.mood}}</span>。</p>
             </nz-card>
           </nz-timeline-item>
         </nz-timeline>
-        <ng-template #dotTemplate>
-          <i nz-icon type="clock-circle-o" style="font-size: 16px;"></i>
-        </ng-template>
       </div>
     </nz-tab>
   </nz-tabset>
+
 </div>

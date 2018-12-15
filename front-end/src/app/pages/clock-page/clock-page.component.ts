@@ -9,6 +9,7 @@ import { Record } from "../../domain/record";
 export class ClockPageComponent implements OnInit {
 
   records: Record[];
+  mood: string = "";
 
   constructor() { }
 
