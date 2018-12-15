@@ -1,0 +1,19 @@
+image: node:8.12
+
+cache:
+  paths:
+  - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - cd front-end
+    - npm install
+    - npm install -g angular/cli
+    - ng build -aot
+    - mv ./dist/* ./public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master # this job will affect only the 'master' branch
