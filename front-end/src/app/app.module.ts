@@ -16,7 +16,8 @@ import { LeavePageComponent } from './pages/leave-page/leave-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { GooutPageCardComponent } from './components/goout-page-card/goout-page-card.component';
 import { NewOutComponent } from './components/new-out/new-out.component';
-import { NewLeaveComponent } from './comonents/new-leave/new-leave.component';
+import { NewLeaveComponent } from './components/new-leave/new-leave.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 registerLocaleData(zh);
 
@@ -30,7 +31,8 @@ registerLocaleData(zh);
     LoginComponent,
     GooutPageCardComponent,
     NewOutComponent,
-    NewLeaveComponent
+    NewLeaveComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
