@@ -1,0 +1,43 @@
+<div class="new-out-container">
+
+  <button nz-button [nzType]="'primary'" (click)="showModal()">
+    新增外出申请
+  </button>
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="申请外出" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <div class="new-out-item">
+      <nz-input-group nzAddOnBefore="申请ID">
+        <input type="text" nz-input [(ngModel)]="id" disabled>
+      </nz-input-group>
+    </div>
+    <div class="new-out-item">
+      <nz-input-group nzAddOnBefore="用户ID">
+        <input nz-input placeholder="当前用户ID" [(ngModel)]="userId" disabled>
+      </nz-input-group>
+    </div>
+    <div class="new-out-item">
+          <nz-date-picker class="start-time-picker"
+            nzShowTime
+            nzFormat="yyyy-MM-dd HH:mm:ss"
+            [(ngModel)]="startTime"
+            nzPlaceHolder="开始时间"
+            [nzDisabledDate]="startTimeDisableDate"
+          >
+          </nz-date-picker> 
+
+          <nz-date-picker class="end-time-picker"
+            nzShowTime
+            nzFormat="yyyy-MM-dd HH:mm:ss"
+            [(ngModel)]="endTime"
+            nzPlaceHolder="结束时间"
+            [nzDisabledDate]="endTimeDisableDate"
+          >
+          </nz-date-picker> 
+    </div>
+    <div class="new-out-item">
+      <nz-input-group nzAddOnBefore="外出原因">
+        <input nz-input placeholder="外出原因" [(ngModel)]="reason">
+      </nz-input-group>
+    </div>
+  </nz-modal>
+
+</div>

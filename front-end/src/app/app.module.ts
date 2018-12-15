@@ -14,6 +14,9 @@ import { ClockPageComponent } from './pages/clock-page/clock-page.component';
 import { GooutPageComponent } from './pages/goout-page/goout-page.component';
 import { LeavePageComponent } from './pages/leave-page/leave-page.component';
 import { LoginComponent } from './pages/login/login.component';
+import { GooutPageCardComponent } from './components/goout-page-card/goout-page-card.component';
+import { NewOutComponent } from './components/new-out/new-out.component';
+import { NewLeaveComponent } from './comonents/new-leave/new-leave.component';
 
 registerLocaleData(zh);
 
@@ -24,7 +27,10 @@ registerLocaleData(zh);
     ClockPageComponent,
     GooutPageComponent,
     LeavePageComponent,
-    LoginComponent
+    LoginComponent,
+    GooutPageCardComponent,
+    NewOutComponent,
+    NewLeaveComponent
   ],
   imports: [
     BrowserModule,

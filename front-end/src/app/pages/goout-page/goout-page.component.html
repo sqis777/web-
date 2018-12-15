@@ -1,3 +1,42 @@
-<p>
-  goout-page works!
-</p>
+<div class="app-goout-page">
+
+    <nz-tabset class="page-tabset">
+        <nz-tab nzTitle="进行新的申请">
+          <p class="new-out-desc">填写信息进行新的申请</p>
+          <div class="new-out">
+            <div nz-row nzGutter="16">
+              <div nz-col nzSpan="24">
+                <app-new-out></app-new-out>
+              </div>
+            </div>
+          </div>
+        </nz-tab>
+      </nz-tabset>
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="正在进行中的申请">
+      <p class="in-process-out-desc">显示当前用户未完成的外出申请</p>
+      <div class="in-process-out" *ngIf="hasUncompletedOut">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24" *ngFor="let out of uncompletedOuts">
+            <app-goout-page-card class="goout-page-card" [out]="out"></app-goout-page-card>
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="已经完成的外出申请">
+      <p class="completed-out-desc">显示当前用户已经完成的外出申请</p>
+      <div class="completed-out">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24" *ngFor="let out of completedOuts">
+            <app-goout-page-card class="goout-page-card" [out]="out"></app-goout-page-card>
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+</div>
