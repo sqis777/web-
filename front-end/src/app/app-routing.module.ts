@@ -9,30 +9,33 @@ import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/clock',
+    pathMatch: 'full'
+  },
+  {
     path: 'clock',
     canActivate: [AuthGuard],
     component: ClockPageComponent
   },
   {
     path: 'goout',
+    canActivate: [AuthGuard],
     component: GooutPageComponent
   },
   {
     path: 'leave',
+    canActivate: [AuthGuard],
     component: LeavePageComponent
+  },
+  {
+    path: 'annual',
+    canActivate: [AuthGuard],
+    component: AnnualPageComponent
   },
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'annual',
-    component: AnnualPageComponent
-  },
-  {
-    path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
   },
   {
     path: '**',
