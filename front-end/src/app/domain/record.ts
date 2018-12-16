@@ -8,7 +8,7 @@
 export class Record {
     id: number;
     userId: number;
-    time: string;
+    time: Date;
     mood: string;
     isLate: boolean;
 }
