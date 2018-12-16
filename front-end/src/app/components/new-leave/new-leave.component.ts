@@ -28,6 +28,8 @@ export class NewLeaveComponent implements OnInit {
   }
 
   handleOk(): void {
+    // TODO：请假申请点击事件
+    // 验证请假表单填写
     console.log('Button ok clicked!');
     this.isVisible = false;
   }

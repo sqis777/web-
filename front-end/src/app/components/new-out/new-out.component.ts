@@ -29,6 +29,8 @@ export class NewOutComponent implements OnInit {
   }
 
   handleOk(): void {
+    // TODO: 外出申请点击事件
+    // 验证表单填写
     console.log('Button ok clicked!');
     this.isVisible = false;
   }
