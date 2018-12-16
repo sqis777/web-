@@ -1,3 +1,42 @@
-<p>
-  leave-page works!
-</p>
+<div class="app-leave-page">
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="进行新的请假申请">
+      <p class="new-leave-desc">填写信息进行新的请假申请</p>
+      <div class="new-leave">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24">
+            <app-new-leave></app-new-leave>
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="正在进行中的请假申请">
+      <p class="in-process-leave-desc">显示当前用户未完成的请假申请</p>
+      <div class="in-process-leave" *ngIf="hasUncompletedLeave">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24" *ngFor="let leave of uncompletedLeaves">
+            <app-goout-page-card class="goout-page-card" [out]="leave"></app-goout-page-card>
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="已经完成的请假申请">
+      <p class="completed-leave-desc">显示当前用户已经完成的请假申请</p>
+      <div class="completed-leave">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24" *ngFor="let leave of completedLeaves">
+            <app-goout-page-card class="goout-page-card" [out]="leave"></app-goout-page-card>
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+</div>

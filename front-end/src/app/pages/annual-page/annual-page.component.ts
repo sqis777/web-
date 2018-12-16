@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnnualPageComponent implements OnInit {
 
+  remainAnnualLeave: number = 0;
+  annualLeaveLength: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+    this.remainAnnualLeave = 5;
+    this.annualLeaveLength = 10;
   }
 
 }

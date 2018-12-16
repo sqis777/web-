@@ -1,3 +1,29 @@
-<p>
-  annual-page works!
-</p>
+<div class="app-annual-page">
+
+  <nz-tabset class="page-tabset">
+    <nz-tab nzTitle="我的年假">
+      <p class="show-desc">显示我的年假情况</p>
+      <div class="new-leave">
+        <div nz-row nzGutter="16">
+          <div nz-col nzSpan="24">
+
+            <nz-card>
+              <div class="annual-remain">
+                <span>年假剩余：</span>
+                {{remainAnnualLeave}}
+                <span>天。</span>
+              </div>
+              <div class="annual-all">
+                <span>年假总数：</span>
+                {{annualLeaveLength}}
+                <span>天。</span>
+              </div>
+            </nz-card>
+
+          </div>
+        </div>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+
+</div>
