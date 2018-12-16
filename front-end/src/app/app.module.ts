@@ -20,6 +20,7 @@ import { NewOutComponent } from './components/new-out/new-out.component';
 import { NewLeaveComponent } from './components/new-leave/new-leave.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
+import { RegisterComponent } from './components/register/register.component';
 
 registerLocaleData(zh);
 
@@ -35,7 +36,8 @@ registerLocaleData(zh);
     NewOutComponent,
     NewLeaveComponent,
     FooterComponent,
-    AnnualPageComponent
+    AnnualPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../services/auth.service";
+import { NzMessageService } from "ng-zorro-antd";
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
+    private message: NzMessageService,
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,14 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.authService.login(this.username, this.password, this.rememberLogin);
+  }
+
+  forgetPassword() {
+    this.message.info("该功能暂未实现")
+  }
+
+  register() {
+    console.log("You click register.");
   }
 
 }

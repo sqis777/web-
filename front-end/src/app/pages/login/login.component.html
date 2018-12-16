@@ -27,8 +27,8 @@
           <button nz-button nzType="primary" nzBlock (click)="login()">登陆</button>
         </div>
         <div class="login-form-item">
-          <a class="forget-password">忘记密码</a>
-          <a class="register">点我注册</a>
+          <a (click)="forgetPassword()" class="forget-password">忘记密码</a>
+          <app-register class="register"></app-register>
         </div>
       </nz-card>
     </div>

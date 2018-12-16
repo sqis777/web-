@@ -1,0 +1,35 @@
+<a (click)="showLayer()" class="register-button">点我注册</a>
+<nz-modal [(nzVisible)]="visiable" nzTitle="注册用户" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="用户名">
+    <input type="text" nz-input [(ngModel)]="username">
+  </nz-input-group>
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="密码">
+    <input type="password" nz-input [(ngModel)]="password">
+  </nz-input-group>
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="确认密码">
+    <input type="password" nz-input [(ngModel)]="confirmPassword">
+  </nz-input-group>
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="年龄">
+    <input type="number" nz-input [(ngModel)]="age">
+  </nz-input-group>
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="性别">
+    <nz-select class="register-department" [(ngModel)]="gender">
+      <nz-option nzValue="man" nzLabel="男生"></nz-option>
+      <nz-option nzValue="woman" nzLabel="女生"></nz-option>
+    </nz-select>
+  </nz-input-group>
+
+  <nz-input-group class="register-form-item" nzAddOnBefore="级别">
+    <nz-select class="register-department" [(ngModel)]="department">
+      <nz-option nzValue="1" nzLabel="普通员工"></nz-option>
+      <nz-option nzValue="2" nzLabel="行政员工"></nz-option>
+      <nz-option nzValue="3" nzLabel="经理（副）"></nz-option>
+    </nz-select>
+  </nz-input-group>
+
+</nz-modal>
