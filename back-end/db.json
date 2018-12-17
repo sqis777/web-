@@ -7,7 +7,7 @@
             "age": 12,
             "gender": "man",
             "department": "administration",
-            "position": "company",
+            "position": 3,
             "remain_annual_leave": 5,
             "annual_leave_length": 10
         },
@@ -18,7 +18,7 @@
             "age": 12,
             "gender": "man",
             "department": "administration",
-            "position": "company",
+            "position": 2,
             "remain_annual_leave": 5,
             "annual_leave_length": 10
         }

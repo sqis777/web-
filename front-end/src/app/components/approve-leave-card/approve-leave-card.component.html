@@ -1,0 +1,22 @@
+<nz-card style="margin-top: 10px; width:100%;">
+  <p>申请编号: {{leave.id}}</p>
+  <p>用户工号: {{leave.userId}}</p>
+  <p>请假原因: {{leave.reason}}</p>
+  <p>请假天数: {{leave.days}}</p>
+
+  <div *ngIf="leave.state===1">
+    <p>当前状态: 待审批</p>
+    <div class="approve-reason">
+      <p>审批原因: </p>
+      <textarea rows="4" nz-input [(ngModel)]="leave.approve_reason"  placeholder="input your approval reason"></textarea>
+      <button nz-button nzType="default">通过</button>
+      <button nz-button nzType="default">不通过</button>
+    </div>
+  </div>
+  <div *ngIf="leave.state===2">
+    <p *ngIf="leave.state === 2">当前状态: 已审批</p>
+    <p>审批原因：</p>
+    <input nz-input placeholder="" [(ngModel)]="leave.approve_reason" [disabled]="true">
+  </div>
+
+</nz-card>

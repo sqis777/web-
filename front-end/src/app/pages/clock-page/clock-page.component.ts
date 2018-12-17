@@ -40,7 +40,7 @@ export class ClockPageComponent implements OnInit {
     // record id 的自动升序
     let record: Record = {
       id: 12,
-      userId: <number>userId,
+      userId: 2,
       time: new Date(),
       mood: this.mood,
       isLate: false,
@@ -59,7 +59,7 @@ export class ClockPageComponent implements OnInit {
     // record id 的自动升序
     let record: Record = {
       id: 12,
-      userId: <number>userId,
+      userId: 1,
       time: new Date(),
       mood: this.mood,
       isLate: false,

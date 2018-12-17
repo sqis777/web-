@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   gender: string = "";
   age: number;
   department: string = "";
-  position: string = "在外";
+  position: number = 1;
   remainAnnualLeave: number = 10;
   AnnualLeaveLength: number = 10;
   inputErrorMessage: string = "";

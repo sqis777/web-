@@ -6,6 +6,7 @@ import { LeavePageComponent } from "./pages/leave-page/leave-page.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
 import { AuthGuard } from "./auth/auth.guard";
+import {ApprovePageComponent} from "./pages/approve-page/approve-page.component";
 
 const routes: Routes = [
   {
@@ -34,13 +35,18 @@ const routes: Routes = [
     component: AnnualPageComponent
   },
   {
+    path:'approve',
+    canActivate: [AuthGuard],
+    component: ApprovePageComponent
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
   {
     path: '**',
     component: LoginComponent
-  },
+  }
 ];
 
 @NgModule({

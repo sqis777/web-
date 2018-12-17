@@ -12,7 +12,7 @@ export class User {
     age: number;
     gender: string;
     department: string;
-    position: string;
+    position: number;
     remainAnnualLeave: number;
     AnnualLeaveLength: number;
 }

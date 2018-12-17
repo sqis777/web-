@@ -21,6 +21,9 @@ import { NewLeaveComponent } from './components/new-leave/new-leave.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ApprovePageComponent } from "./pages/approve-page/approve-page.component";
+import {ApproveGoOutPageCardComponent} from "./components/approve-go-out-page-card/approve-go-out-page-card.component";
+import {ApproveLeaveCardComponent} from "./components/approve-leave-card/approve-leave-card.component";
 
 registerLocaleData(zh);
 
@@ -37,7 +40,10 @@ registerLocaleData(zh);
     NewLeaveComponent,
     FooterComponent,
     AnnualPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    ApprovePageComponent,
+    ApproveGoOutPageCardComponent,
+    ApproveLeaveCardComponent
   ],
   imports: [
     BrowserModule,
