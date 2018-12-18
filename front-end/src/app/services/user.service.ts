@@ -124,4 +124,16 @@ export class UserService {
     let url = `${this.api_url}/${userId}`;
     return this.http.delete(url, this.httpOptions);
   };
+
+  /**
+   * @description 获取新建用户的ID
+   * @author Wu Kexin
+   * @date 2018-12-18
+   * @returns {string}
+   * @memberof UserService
+   */
+  createNewUserId():string {
+    let currentTime = new Date();
+    return currentTime.getTime().toString();
+  }
 }

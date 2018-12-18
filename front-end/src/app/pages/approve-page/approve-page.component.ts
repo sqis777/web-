@@ -26,16 +26,16 @@ export class ApprovePageComponent implements OnInit {
   ngOnInit() {
     this.outs = [
       {
-        id: 1,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days: 1,
         state: 1,
         reason: "出差调研，参观火星人民的生活状况。",
         approve_reason: ""
       },
       {
-        id: 2,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days: 2,
         state: 2,
         reason: "出差调研，参观火星人民的生活状况。",
@@ -44,16 +44,16 @@ export class ApprovePageComponent implements OnInit {
     ];
     this.leaves = [
       {
-        id: 3,
-        userId: 3,
+        id: "1545094909357",
+        userId: "1545094909357",
         days: 3,
         state: 1,
         reason: "来一场说走就走的旅行~",
         approve_reason:""
       },
       {
-        id: 4,
-        userId: 4,
+        id: "1545094909357",
+        userId: "1545094909357",
         days: 4,
         state: 2,
         reason: "来一场说走就走的旅行~",
