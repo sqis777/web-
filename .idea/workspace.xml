@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebbe98f4-2cc1-4c97-994d-04918c236e7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/back-end/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/approve-go-out-page-card/approve-go-out-page-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/approve-go-out-page-card/approve-go-out-page-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/approve-go-out-page-card/approve-go-out-page-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/approve-go-out-page-card/approve-go-out-page-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/goout-page-card/goout-page-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/goout-page-card/goout-page-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/pages/approve-page/approve-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/pages/approve-page/approve-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="525">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -163,13 +154,13 @@
         <option value="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.html" />
         <option value="$PROJECT_DIR$/front-end/src/app/services/user.service.ts" />
         <option value="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.html" />
-        <option value="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts" />
         <option value="$PROJECT_DIR$/front-end/src/app/services/approve.service.ts" />
         <option value="$PROJECT_DIR$/front-end/src/app/components/goout-page-card/goout-page-card.component.html" />
         <option value="$PROJECT_DIR$/front-end/src/app/components/approve-leave-card/approve-leave-card.component.ts" />
         <option value="$PROJECT_DIR$/front-end/src/app/components/approve-go-out-page-card/approve-go-out-page-card.component.ts" />
         <option value="$PROJECT_DIR$/back-end/db.json" />
         <option value="$PROJECT_DIR$/front-end/src/app/pages/approve-page/approve-page.component.html" />
+        <option value="$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts" />
       </list>
     </option>
   </component>
@@ -242,50 +233,6 @@
               <item name="front-end" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-developing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-developing" type="462c0819:PsiDirectoryNode" />
-              <item name="front-end" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-developing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-developing" type="462c0819:PsiDirectoryNode" />
-              <item name="front-end" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="annual-page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-developing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-developing" type="462c0819:PsiDirectoryNode" />
-              <item name="front-end" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="approve-page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-developing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-developing" type="462c0819:PsiDirectoryNode" />
-              <item name="front-end" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="clock-page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-developing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-developing" type="462c0819:PsiDirectoryNode" />
-              <item name="front-end" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -327,12 +274,12 @@
       <updated>1544794078432</updated>
       <workItem from="1544794079547" duration="1561000" />
       <workItem from="1544883404151" duration="12177000" />
-      <workItem from="1545049235625" duration="9461000" />
+      <workItem from="1545049235625" duration="10365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23199000" />
+    <option name="totallyTimeSpent" value="24103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,8 +653,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front-end/src/app/components/navbar/navbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
