@@ -9,8 +9,8 @@
     <div class="approve-reason">
       <p>审批原因: </p>
       <textarea rows="4" nz-input [(ngModel)]="leave.approve_reason"  placeholder="input your approval reason"></textarea>
-      <button nz-button nzType="default">通过</button>
-      <button nz-button nzType="default">不通过</button>
+      <button nz-button nzType="default" (click)="approvelOK()">通过</button>
+      <button nz-button nzType="default" (click)="approveNotOK()">不通过</button>
     </div>
   </div>
   <div *ngIf="leave.state===2">

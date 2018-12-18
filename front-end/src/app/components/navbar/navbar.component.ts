@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit {
       this.notLogin = !data;
       this.currentUser = authService.userLogined;
       if(this.currentUser.position >= 3) {
-        console.log("current user position > 3");
         this.currentUserPosition = true;
       }
     });

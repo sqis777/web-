@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Out} from "../../domain/out";
+import {ApproveService} from "../../services/approve.service";
 
 @Component({
   selector: 'app-approve-go-out-page-card',
@@ -9,9 +10,22 @@ import {Out} from "../../domain/out";
 export class ApproveGoOutPageCardComponent implements OnInit {
 
   @Input() out: Out;
-  constructor() { }
+  constructor(private approvelService:ApproveService) { }
 
   ngOnInit() {
   }
+   approvelOK(){
+    this.out.state=2;
+     this.approvelService.updateOutApprovel(this.out).subscribe(data=>{
+       console.log("Put Request is successful",this.out,data)
+     });
 
+  }
+  approveNotOK(){
+    this.out.state=2;
+    this.approvelService.updateOutApprovel(this.out).subscribe(data=>{
+      console.log("Put Request is successful",this.out,data)
+  });
+
+  }
 }

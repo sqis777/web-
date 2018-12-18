@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Leave } from "../../domain/leave";
+import {ApproveService} from "../../services/approve.service";
 
 @Component({
   selector: 'app-approve-leave-card',
@@ -8,9 +9,21 @@ import { Leave } from "../../domain/leave";
 })
 export class ApproveLeaveCardComponent implements OnInit {
   @Input() leave: Leave;
-  constructor() { }
+  constructor(private approvelService:ApproveService) { }
 
   ngOnInit() {
+  }
+  approvelOK(){
+    this.leave.state=2;
+    this.approvelService.updateLeaveApprovel(this.leave).subscribe(data=>{
+      console.log("Put Request is successful",this.leave,data)
+    });
+  }
+  approveNotOK(){
+    this.leave.state=2;
+    this.approvelService.updateLeaveApprovel(this.leave).subscribe(data=>{
+      console.log("Put Request is successful",this.leave,data)
+    });
   }
 
 }

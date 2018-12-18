@@ -4,7 +4,7 @@
       <p class="approve-in-process-desc">显示当前未完成的审批</p>
       <div class="in-process-out" *ngIf="hasUncompletedApprovelOut||hasUncompletedApprovelLeave">
         <div nz-row nzGutter="16">
-          <div nz-col nzSpan="24" *ngFor="let out of unCompletedApproveOut,let leave of unCompletedApproveLeave">
+          <div nz-col nzSpan="24" *ngFor="let out of unCompletedApproveOut">
             <app-approve-go-out-page-card class="approval-go-out-card" [out]="out"></app-approve-go-out-page-card>
           </div>
           <div nz-col nzSpan="24" *ngFor="let leave of unCompletedApproveLeave">

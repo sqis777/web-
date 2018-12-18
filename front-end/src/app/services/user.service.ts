@@ -124,4 +124,10 @@ export class UserService {
     let url = `${this.api_url}/${userId}`;
     return this.http.delete(url, this.httpOptions);
   };
+
+
+  updateApprovelReason(userId: number): Observable<{}> {
+    let url = `${this.api_url}/${userId}`;
+    return this.http.post(url, this.httpOptions);
+  };
 }
