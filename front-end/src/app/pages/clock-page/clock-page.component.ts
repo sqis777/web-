@@ -19,15 +19,15 @@ export class ClockPageComponent implements OnInit {
   ngOnInit() {
     this.records = [
       {
-        "id": 1,
-        "userId": 1,
+        "id": "1545094909357",
+        "userId": "1545094909357",
         "time": new Date("2018-11-11 08:00:00"),
         "mood": "高兴",
         "isLate": false
       },
       {
-        "id": 2,
-        "userId": 2,
+        "id": "1545094909357",
+        "userId": "1545094909357",
         "time": new Date("2018-11-11 08:00:00"),
         "mood": "高兴",
         "isLate": false
@@ -39,8 +39,8 @@ export class ClockPageComponent implements OnInit {
     let userId = localStorage.getItem("userId") ? localStorage.getItem("userId") : sessionStorage.getItem("userId");
     // record id 的自动升序
     let record: Record = {
-      id: 12,
-      userId: 2,
+      id: "1545094909357",
+      userId: "1545094909357",
       time: new Date(),
       mood: this.mood,
       isLate: false,
@@ -58,8 +58,8 @@ export class ClockPageComponent implements OnInit {
     let userId = localStorage.getItem("userId") ? localStorage.getItem("userId") : sessionStorage.getItem("userId");
     // record id 的自动升序
     let record: Record = {
-      id: 12,
-      userId: 1,
+      id: "1545094909357",
+      userId: "1545094909357",
       time: new Date(),
       mood: this.mood,
       isLate: false,

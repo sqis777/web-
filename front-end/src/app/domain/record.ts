@@ -6,8 +6,8 @@
  * @class Record
  */
 export class Record {
-    id: number;
-    userId: number;
+    id: string;
+    userId: string;
     time: Date;
     mood: string;
     isLate: boolean;
