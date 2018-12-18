@@ -50,9 +50,9 @@ export class RecordService {
    * @returns {Observable<Record>}
    * @memberof RecordService
    */
-  getRecordByUserId(userId: string): Observable<Record> {
+  getRecordByUserId(userId: string): Observable<Record[]> {
     let url = `${this.api_url}/?userId=${userId}`;
-    return this.http.get<Record>(url);
+    return this.http.get<Record[]>(url);
   };
 
   /**

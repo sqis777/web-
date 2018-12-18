@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NzMessageService } from "ng-zorro-antd";
 import { Record } from "../../domain/record";
-// import { AuthService } from "../../services/auth.service";
+import { AuthService } from "../../services/auth.service";
+import { RecordService } from "../../services/record.service";
 
 @Component({
   selector: 'app-clock-page',
@@ -10,37 +12,29 @@ import { Record } from "../../domain/record";
 export class ClockPageComponent implements OnInit {
 
   records: Record[];
-  mood: string = "";
+  mood: string = "啷里格啷啦啦啦";
 
   constructor(
-    // private authService: AuthService,
+    private authService: AuthService,
+    private recordService: RecordService,
+    private message: NzMessageService,
   ) { }
 
   ngOnInit() {
-    this.records = [
-      {
-        "id": "1545094909357",
-        "userId": "1545094909357",
-        "time": new Date("2018-11-11 08:00:00"),
-        "mood": "高兴",
-        "isLate": false
-      },
-      {
-        "id": "1545094909357",
-        "userId": "1545094909357",
-        "time": new Date("2018-11-11 08:00:00"),
-        "mood": "高兴",
-        "isLate": false
-      }
-    ]
+    this.message.info("加载数据中");
+    let userId = localStorage.getItem("userId") ? localStorage.getItem("userId") : sessionStorage.getItem("userId");
+    this.recordService.getRecordByUserId(userId).subscribe((res) => {
+      this.message.remove();
+      this.message.success("加载成功");
+      this.records = res.reverse();
+    })
   }
 
   inClock() {
-    let userId = localStorage.getItem("userId") ? localStorage.getItem("userId") : sessionStorage.getItem("userId");
-    // record id 的自动升序
+    let userId = this.authService.userLogined.id;
     let record: Record = {
-      id: "1545094909357",
-      userId: "1545094909357",
+      id: this.recordService.createNewRecordId(),
+      userId: userId,
       time: new Date(),
       mood: this.mood,
       isLate: false,
@@ -50,29 +44,36 @@ export class ClockPageComponent implements OnInit {
     } else {
       record.isLate = false;
     }
-    // TODO: 上班打卡的后台请求
-    console.log("上班打卡, 打卡记录: ", record);
+    // http request
+    this.recordService.createRecord(record).subscribe(() => {
+      this.message.success("打卡成功");
+      this.recordService.getRecordByUserId(userId).subscribe((res) => {
+        this.records = res.reverse();
+      })
+    });
   }
 
   outClock() {
-    let userId = localStorage.getItem("userId") ? localStorage.getItem("userId") : sessionStorage.getItem("userId");
-    // record id 的自动升序
+    let userId = this.authService.userLogined.id;
     let record: Record = {
-      id: "1545094909357",
-      userId: "1545094909357",
+      id: this.recordService.createNewRecordId(),
+      userId: userId,
       time: new Date(),
       mood: this.mood,
       isLate: false,
     };
-    if (record.time.getHours() < 18) {
-      // Notice: 如果是下班打卡，早退也会记录到 isLate 属性中
-      // 早退的时候 isLate = true
+    if (record.time.getHours() > 18) {
       record.isLate = true;
     } else {
       record.isLate = false;
     }
-    // 下班打卡的后台请求
-    console.log("下班打卡, 打卡记录: ", record);
+    // http request
+    this.recordService.createRecord(record).subscribe(() => {
+      this.message.success("打卡成功");
+      this.recordService.getRecordByUserId(userId).subscribe((res) => {
+        this.records = res.reverse();
+      })
+    });
   }
 
 }

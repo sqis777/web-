@@ -32,7 +32,7 @@ export class AuthService {
         authGuard.publicLogin(true);
       })
     }
-   };
+  };
 
   login(username: string, password: string, rememberMe: boolean) {
     this.userService.getUserByUsername(username).subscribe((data) => {
