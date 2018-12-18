@@ -19,16 +19,16 @@ export class LeavePageComponent implements OnInit {
   ngOnInit() {
     this.leaves = [
       {
-        id: 1,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days:1,
         state: 1,
         reason: "请假回家详情",
         approve_reason:""
       },
       {
-        id: 2,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days:1,
         state: 2,
         reason: "请回家给自己的狗相亲",

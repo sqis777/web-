@@ -19,16 +19,16 @@ export class GooutPageComponent implements OnInit {
   ngOnInit() {
     this.outs = [
       {
-        id: 1,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days:1,
         state: 1,
         reason: "出差调研，参观火星人民的生活状况。",
         approve_reason:""
       },
       {
-        id: 2,
-        userId: 1,
+        id: "1545094909357",
+        userId: "1545094909357",
         days:2,
         state: 2,
         reason: "出差调研，参观火星人民的生活状况。",

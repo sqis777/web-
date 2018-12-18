@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/domain/user';
 import { NzMessageService } from "ng-zorro-antd";
+import { UserService } from "../../services/user.service";
 
 @Component({
   selector: 'app-register',
@@ -23,6 +24,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private message: NzMessageService,
+    private userService: UserService,
   ) { }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class RegisterComponent implements OnInit {
     if (this.checkInputValue()) {
       this.visiable = false;
       let user: User = {
-        id: 12,
+        id: this.userService.createNewUserId(),
         username: this.username,
         password: this.password,
         age: this.age,

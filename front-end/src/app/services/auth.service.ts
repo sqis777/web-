@@ -22,7 +22,17 @@ export class AuthService {
     private message: NzMessageService,
     private router: Router,
     private authGuard: AuthGuard,
-  ) { };
+  ) {
+    if (localStorage.getItem("userId") || sessionStorage.getItem("userId")) {
+      let userId = localStorage.getItem("userId") ? localStorage.getItem("UserId") : sessionStorage.getItem("userId");
+      this.userService.getUserById(userId).subscribe((res) => {
+        console.log("Get user is", res);
+        this.userLogined = res;
+        this.isLoggedIn = true;
+        authGuard.publicLogin(true);
+      })
+    }
+  };
 
   login(username: string, password: string, rememberMe: boolean) {
     this.userService.getUserByUsername(username).subscribe((data) => {

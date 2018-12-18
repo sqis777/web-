@@ -6,8 +6,8 @@
  * @class Leave
  */
 export class Leave {
-    id: number; // 此条记录ID
-    userId: number; // 此条记录关联的用户id
+    id: string; // 此条记录ID
+    userId: string; // 此条记录关联的用户id
     days: number;
     state: number;  // 申请状态
     reason: string; // 请假原因

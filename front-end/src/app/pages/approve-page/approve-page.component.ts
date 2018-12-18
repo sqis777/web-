@@ -54,6 +54,7 @@ export class ApprovePageComponent implements OnInit {
         }
       }});
 
+
   }
   getLeaves():void{
     this.approveService.getLeaves().subscribe(leaves=>{
