@@ -22,3 +22,7 @@ json-server db.json
 2. [http://123.206.80.115:3000/user](http://123.206.80.115:3000/users) = 所有用户
 
 3. 以此类推。
+
+### 后台切换
+
+如果想要切换后台，需要将文件 `fron-end/services/config.service.ts` 文件中的 `baseUrl` 换为 `http://localhost:300`, 如果是从本地换为远程后台，则应换为 `http://http://123.206.80.115:3000`。
