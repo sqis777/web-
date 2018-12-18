@@ -1,5 +1,11 @@
 # web 课程大作业
 
+## 项目实时预览
+
+访问 [angular7-demo](https://xiaofeit.gitlab.io/angular7-demo) 查看项目的实时预览
+
+> 请使用 http 访问，如果登陆失败，无法加载数据，请点击浏览器的允许从不安全的站点加载数据
+
 ## 后台 
 
 ### 本地后台
