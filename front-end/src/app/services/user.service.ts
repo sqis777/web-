@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { User } from "../domain/user";
+import { ConfigService } from "./config.service";
 
 import { Observable, throwError } from 'rxjs';
 // import { catchError, retry } from 'rxjs/operators';
@@ -10,12 +11,17 @@ import { Observable, throwError } from 'rxjs';
 })
 export class UserService {
 
-  private api_url = "http://localhost:3000/users";
+  private api_url: string;
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private configService: ConfigService,
+  ) {
+    this.api_url = `${this.configService.baseUrl}/users`;
+  }
 
   // 使用方法
   // 1. this.userService.getConfig().subscribe(
@@ -132,7 +138,7 @@ export class UserService {
    * @returns {string}
    * @memberof UserService
    */
-  createNewUserId():string {
+  createNewUserId(): string {
     let currentTime = new Date();
     return currentTime.getTime().toString();
   }

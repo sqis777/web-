@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Out } from "../domain/out";
 import { Observable } from 'rxjs';
+import { Out } from "../domain/out";
+import { ConfigService } from "./config.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class OutService {
 
-  private api_url = "http://localhost:3000/outs";
+  private api_url: string;
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private configService: ConfigService,
+  ) { }
+
+  ngInit() {
+    this.api_url = `${this.configService.baseUrl}/outs`;
+  }
 
   // 使用方法
   // 1. this.userService.getConfig().subscribe(

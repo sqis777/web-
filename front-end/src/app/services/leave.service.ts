@@ -2,20 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Leave } from "../domain/leave";
+import { ConfigService } from "./config.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeaveService {
 
-  private api_url = "http://localhost:3000/leaves";
+  private api_url: string;
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
   constructor(
     private http: HttpClient,
+    private configService: ConfigService,
   ) { }
+
+  ngInit() {
+    this.api_url = `${this.configService.baseUrl}/leaves`;
+  };
 
   /**
    * @description 获取所有的 leave
