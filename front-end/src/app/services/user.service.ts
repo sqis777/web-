@@ -51,7 +51,7 @@ export class UserService {
    * @returns {Observable<User>}
    * @memberof UserService
    */
-  getUserById(id: number): Observable<User> {
+  getUserById(id: string): Observable<User> {
     let url = `${this.api_url}/${id}`;
     return this.http.get<User>(url);
   };
