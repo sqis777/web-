@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ApproveLeaveCardComponent } from './approve-leave-card.component';
+import {ApproveLeaveCardComponent} from './approve-leave-card.component';
 
 describe('ApproveLeaveCardComponent', () => {
   let component: ApproveLeaveCardComponent;

@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Out } from "../domain/out";
-import { ConfigService } from "./config.service";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable, Subject} from 'rxjs';
+import {Out} from "../domain/out";
+import {ConfigService} from "./config.service";
 
+// * @author Fan Lishui
 @Injectable({
   providedIn: 'root'
 })
@@ -14,12 +15,13 @@ export class OutService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
+  private publicHasNewAOut = new Subject();
+  hasNewAOutObservable = this.publicHasNewAOut.asObservable();
+
   constructor(
     private http: HttpClient,
     private configService: ConfigService,
-  ) { }
-
-  ngInit() {
+  ) {
     this.api_url = `${this.configService.baseUrl}/outs`;
   }
 
@@ -38,7 +40,6 @@ export class OutService {
 
   /**
    * @description 查询所有外出申请
-   * @author Wu Kexin
    * @date 2018-12-15
    * @returns {Observable<Out[]>}
    * @memberof OutService
@@ -51,7 +52,6 @@ export class OutService {
 
   /**
    * @description 根据 Id 查询 out
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {string} id
    * @returns {Observable<Out>}
@@ -65,23 +65,21 @@ export class OutService {
 
   /**
    * @description 根据 userId 查询 out
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {string} userId
    * @returns {Observable<Out>}
    * @memberof OutService
    */
-  getOutByUserId(userId: string): Observable<Out> {
+  getOutByUserId(userId: string): Observable<Out[]> {
     let url = `${this.api_url}/?userId=${userId}`;
-    return this.http.get<Out>(url);
+    return this.http.get<Out[]>(url);
   };
 
   /**
    * @description 新建一个 out
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {Out} out
-   * @returns {Observable<Out>}
+   * @returns {Observable<Out>} 新增的Out对象
    * @memberof OutService
    */
   createOut(out: Out): Observable<Out> {
@@ -94,7 +92,6 @@ export class OutService {
 
   /**
    * @description 修改某个 out 的信息
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {Out} ouot
    * @returns {Observable<Out>}
@@ -107,7 +104,6 @@ export class OutService {
 
   /**
    * @description delete a out by object out
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {Out} out
    * @returns {Observable<{}>}
@@ -120,7 +116,6 @@ export class OutService {
 
   /**
    * @description delete a out by id
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {string} id
    * @returns {Observable<{}>}
@@ -133,7 +128,6 @@ export class OutService {
 
   /**
    * @description 根据 userId 删除 Out
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} userId
    * @returns {Observable<{}>}
@@ -146,13 +140,17 @@ export class OutService {
 
   /**
    * @description 获取新建 out 的 ID
-   * @author Wu Kexin
    * @date 2018-12-18
-   * @returns {string}
+   * @returns {string} a new out id
    * @memberof OutService
    */
   createNewOutId(): string {
     let currentTime = new Date();
     return currentTime.getTime().toString();
+  }
+
+  //发射数据，当调用这个方法的时候，Subject就会发射这个数据，所有订阅了这个Subject的Subscription都会接受到结果
+  publicNeedFresh(needFresh: boolean) {
+    this.publicHasNewAOut.next(needFresh);
   }
 }

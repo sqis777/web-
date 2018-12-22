@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Leave } from "../domain/leave";
-import { ConfigService } from "./config.service";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable, Subject} from "rxjs";
+import {Leave} from "../domain/leave";
+import {ConfigService} from "./config.service";
 
+// * @author Sun Qisong
 @Injectable({
   providedIn: 'root'
 })
@@ -14,18 +15,18 @@ export class LeaveService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
+  private publicLeavesHasNewAOut = new Subject();
+  hasLeavesNewAOutObservable = this.publicLeavesHasNewAOut.asObservable();
+
   constructor(
     private http: HttpClient,
     private configService: ConfigService,
-  ) { }
-
-  ngInit() {
+  ) { 
     this.api_url = `${this.configService.baseUrl}/leaves`;
-  };
+  }
 
   /**
    * @description 获取所有的 leave
-   * @author Wu Kexin
    * @date 2018-12-18
    * @returns {Observable<Leava[]>}
    * @memberof LeaveService
@@ -37,7 +38,6 @@ export class LeaveService {
 
   /**
    * @description 根据 id 获取 leave
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} id
    * @returns {Observable<Leave>}
@@ -50,20 +50,18 @@ export class LeaveService {
 
   /**
    * @description get a leave by userId
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} userId
    * @returns {Observable<Leave>}
    * @memberof LeaveService
    */
-  getLeaveByUserId(userId: string): Observable<Leave> {
+  getLeaveByUserId(userId: string): Observable<Leave[]> {
     let url = `${this.api_url}/?userId=${userId}`;
-    return this.http.get<Leave>(url);
+    return this.http.get<Leave[]>(url);
   };
 
   /**
    * @description new a leave 
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Leave} leave
    * @returns {Observable<Leave>}
@@ -76,7 +74,6 @@ export class LeaveService {
 
   /**
    * @description update a leave
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Leave} leave
    * @returns {Observable<Leava>}
@@ -89,7 +86,6 @@ export class LeaveService {
 
   /**
    * @description delete a leave by the leave object
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Leave} leave
    * @returns {Observable<{}>}
@@ -102,7 +98,6 @@ export class LeaveService {
 
   /**
    * @description delete a leave by this id
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} id
    * @returns {Observable<{}>}
@@ -115,7 +110,6 @@ export class LeaveService {
 
   /**
    * @description delete a leave by userId
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} userId
    * @returns {Observable<{}>}
@@ -128,7 +122,6 @@ export class LeaveService {
 
   /**
    * @description get the new leave item's id
-   * @author Wu Kexin
    * @date 2018-12-18
    * @returns {string}
    * @memberof LeaveService
@@ -137,4 +130,9 @@ export class LeaveService {
     let currentTime = new Date();
     return currentTime.getTime().toString();
   };
+
+  //发射数据，当调用这个方法的时候，Subject就会发射这个数据，所有订阅了这个Subject的Subscription都会接受到结果
+  publicLeavesNeedFresh(needFresh: boolean) {
+    this.publicLeavesHasNewAOut.next(needFresh);
+  }
 }

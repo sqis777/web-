@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NewLeaveComponent } from './new-leave.component';
+import {NewLeaveComponent} from './new-leave.component';
 
 describe('NewLeaveComponent', () => {
   let component: NewLeaveComponent;

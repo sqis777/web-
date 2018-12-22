@@ -24,6 +24,27 @@
         </div>
       </div>
     </nz-tab>
+    <nz-tab nzTitle="年假列表" *ngIf="currentUserPosition">
+      <nz-table #editRowTable nzBordered [nzData]="dataSet">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Remain</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataSet">
+            <td>{{data.id}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.remainAnnualLeave}}</td>
+            <td>{{data.AnnualLeaveLength}}</td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </nz-tab>
   </nz-tabset>
-
 </div>

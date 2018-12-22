@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Out} from "../../domain/out";
 import {ApproveService} from "../../services/approve.service";
 
+// * @author Sun Qisong
 @Component({
   selector: 'app-approve-go-out-page-card',
   templateUrl: './approve-go-out-page-card.component.html',

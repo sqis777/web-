@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ClockPageComponent } from './clock-page.component';
+import {ClockPageComponent} from './clock-page.component';
 
 describe('ClockPageComponent', () => {
   let component: ClockPageComponent;

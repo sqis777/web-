@@ -1,27 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { registerLocaleData } from '@angular/common';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ClockPageComponent } from './pages/clock-page/clock-page.component';
-import { GooutPageComponent } from './pages/goout-page/goout-page.component';
-import { LeavePageComponent } from './pages/leave-page/leave-page.component';
-import { LoginComponent } from './pages/login/login.component';
-import { GooutPageCardComponent } from './components/goout-page-card/goout-page-card.component';
-import { NewOutComponent } from './components/new-out/new-out.component';
-import { NewLeaveComponent } from './components/new-leave/new-leave.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { AnnualPageComponent } from './pages/annual-page/annual-page.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ApprovePageComponent } from "./pages/approve-page/approve-page.component";
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {ClockPageComponent} from './pages/clock-page/clock-page.component';
+import {GooutPageComponent} from './pages/goout-page/goout-page.component';
+import {LeavePageComponent} from './pages/leave-page/leave-page.component';
+import {LoginComponent} from './pages/login/login.component';
+import {GooutPageCardComponent} from './components/goout-page-card/goout-page-card.component';
+import {NewOutComponent} from './components/new-out/new-out.component';
+import {NewLeaveComponent} from './components/new-leave/new-leave.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {AnnualPageComponent} from './pages/annual-page/annual-page.component';
+import {RegisterComponent} from './components/register/register.component';
+import {ApprovePageComponent} from "./pages/approve-page/approve-page.component";
 import {ApproveGoOutPageCardComponent} from "./components/approve-go-out-page-card/approve-go-out-page-card.component";
 import {ApproveLeaveCardComponent} from "./components/approve-leave-card/approve-leave-card.component";
 

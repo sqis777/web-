@@ -48,12 +48,9 @@
       "days": 3,
       "state": 2,
       "reason": "来一场说走就走的旅行~",
-      "approve_reason": "asdd"
-
+      "approve_reason": "asdd",
       "startTime": "2018-11-11 08:00:00",
-      "endTime": "2018-11-11 08:00:00",
-      "state": 1,
-      "reason": "生病了，必须请假，不请假会死的"
+      "endTime": "2018-11-11 08:00:00"
     },
     {
       "id": "1545094965138",
@@ -69,7 +66,6 @@
     {
       "id": 1,
       "userId": 1,
-
       "time": "2018-11-11 08:00:00",
       "mood": "高兴",
       "isLate": false
@@ -77,10 +73,6 @@
     {
       "id": 2,
       "userId": 2,
-      "time": "2018-11-11 08:00:00",
-      "mood": "高兴",
-      "isLate": false
-
       "time": "2018-11-11 08:00:00",
       "mood": "高兴",
       "isLate": false

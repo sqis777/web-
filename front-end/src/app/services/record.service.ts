@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Record } from "../domain/record";
-import { ConfigService } from "./config.service";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Record} from "../domain/record";
+import {ConfigService} from "./config.service";
 
+// * @author Song Qiqi
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +24,6 @@ export class RecordService {
 
   /**
    * @description 获取所有的 record
-   * @author Wu Kexin
    * @date 2018-12-18
    * @returns {Observable<Leava[]>}
    * @memberof RecordService
@@ -35,7 +35,6 @@ export class RecordService {
 
   /**
    * @description 根据 id 获取 record
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} id
    * @returns {Observable<Record>}
@@ -48,7 +47,6 @@ export class RecordService {
 
   /**
    * @description get a record by userId
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} userId
    * @returns {Observable<Record>}
@@ -61,7 +59,6 @@ export class RecordService {
 
   /**
    * @description new a record 
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Record} record
    * @returns {Observable<Record>}
@@ -74,7 +71,6 @@ export class RecordService {
 
   /**
    * @description update a record
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Record} record
    * @returns {Observable<Leava>}
@@ -87,7 +83,6 @@ export class RecordService {
 
   /**
    * @description delete a record by the record object
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {Record} reacord
    * @returns {Observable<{}>}
@@ -100,7 +95,6 @@ export class RecordService {
 
   /**
    * @description delete a record by this id
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} id
    * @returns {Observable<{}>}
@@ -113,7 +107,6 @@ export class RecordService {
 
   /**
    * @description delete a record by userId
-   * @author Wu Kexin
    * @date 2018-12-18
    * @param {string} userId
    * @returns {Observable<{}>}
@@ -126,7 +119,6 @@ export class RecordService {
 
   /**
    * @description get the new record item's id
-   * @author Wu Kexin
    * @date 2018-12-18
    * @returns {string}
    * @memberof RecordService

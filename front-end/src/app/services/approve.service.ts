@@ -1,27 +1,34 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Leave } from "../domain/leave";
-import { Out} from "../domain/out";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Leave} from "../domain/leave";
+import {Out} from "../domain/out";
+import {ConfigService} from "../services/config.service";
 
-import {Observable, of, throwError} from 'rxjs';
-import {catchError, tap} from "rxjs/operators";
+import {Observable, of} from 'rxjs';
+import {catchError} from "rxjs/operators";
 
+// * @author Fan Lishui
 @Injectable({
   providedIn: 'root'
 })
 export class ApproveService {
-  private api_url = "http://localhost:3000";
+  // private api_url = "http://localhost:3000";
+  private api_url = this.configService.baseUrl;
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
-  constructor( private http: HttpClient) { }
+  constructor( 
+    private http: HttpClient,
+    private configService: ConfigService,  
+  ) { }
   updateLeaveApprovel(leave:Leave): Observable<Leave>{
     let url = `${this.api_url}/leaves/${leave.id}`;
     return this.http.put<Leave>(url,leave,this.httpOptions)
   };
+  
   updateOutApprovel(out:Out): Observable<Out>{
     let url = `${this.api_url}/outs/${out.id}`;
-    return this.http.put<Leave>(url,out,this.httpOptions)
+    return this.http.put<Out>(url,out,this.httpOptions)
   };
 
   getOuts (): Observable<Out[]>{

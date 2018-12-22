@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { GooutPageCardComponent } from './goout-page-card.component';
+import {GooutPageCardComponent} from './goout-page-card.component';
 
 describe('GooutPageCardComponent', () => {
   let component: GooutPageCardComponent;

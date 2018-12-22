@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/domain/user';
-import { NzMessageService } from "ng-zorro-antd";
-import { UserService } from "../../services/user.service";
+import {Component, OnInit} from '@angular/core';
+import {NzMessageService} from "ng-zorro-antd";
+import {User} from 'src/app/domain/user';
+import {UserService} from "../../services/user.service";
 
+// * @author Sun Qisong
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
   gender: string = "";
   age: number;
   department: string = "";
-  position: number = 1;
+  position: number = 0;  //当前注册用户的级别
   remainAnnualLeave: number = 10;
   AnnualLeaveLength: number = 10;
   inputErrorMessage: string = "";
@@ -44,13 +45,18 @@ export class RegisterComponent implements OnInit {
         age: this.age,
         gender: this.gender,
         department: this.department,
-        position: this.position,
+        position: <number>this.position,
         remainAnnualLeave: 10,
         AnnualLeaveLength: 10,
       };
       console.log("You click ok, and the form values is ", user);
-      // TODO: 注册用户的后台请求
+      this.userService.createUser(user).subscribe(res => {
+        console.log("注册成功, 返回的数据是：", res);
+        this.message.remove();
+        this.message.success("注册成功, 请使用注册的用户名/密码登陆");
+      })
     } else {
+      this.message.remove();
       this.message.info(this.inputErrorMessage);
     }
   }
@@ -62,12 +68,12 @@ export class RegisterComponent implements OnInit {
 
   /**
    * @description 检查用户输入信息是否满足要求
-   * @author Wu Kexin
    * @date 2018-12-16
    * @returns {boolean} 
    * @memberof RegisterComponent
    */
   checkInputValue() {
+    // TODO: 用户名验证是否重复
     if (this.username.length <= 5) {
       this.inputErrorMessage = "用户名长度需大于5";
       return false;
@@ -86,7 +92,7 @@ export class RegisterComponent implements OnInit {
     } else if (this.gender === "") {
       this.inputErrorMessage = "性别为必选";
       return false;
-    } else if (this.department === "") {
+    } else if (this.position === undefined) {
       this.inputErrorMessage = "级别为必选";
       return false;
     } else {

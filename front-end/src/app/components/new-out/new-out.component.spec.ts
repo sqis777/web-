@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NewOutComponent } from './new-out.component';
+import {NewOutComponent} from './new-out.component';
 
 describe('NewOutComponent', () => {
   let component: NewOutComponent;

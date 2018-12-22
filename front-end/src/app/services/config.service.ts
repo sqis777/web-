@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 /**
  * @description 配置类
- * @author Wu Kexin
  * @date 2018-12-18
+ * @author Wu Kexin
  * @export
  * @class ConfigService
  */

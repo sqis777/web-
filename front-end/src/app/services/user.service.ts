@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { User } from "../domain/user";
-import { ConfigService } from "./config.service";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {User} from "../domain/user";
+import {ConfigService} from "./config.service";
 
-import { Observable, throwError } from 'rxjs';
+import {Observable} from 'rxjs';
 // import { catchError, retry } from 'rxjs/operators';
-
+// * @author Wu Kexin
 @Injectable({
   providedIn: 'root'
 })
@@ -38,7 +38,6 @@ export class UserService {
 
   /**
    * @description 查询所有用户
-   * @author Wu Kexin
    * @date 2018-12-15
    * @returns {Observable<User[]>}
    * @memberof UserService
@@ -51,7 +50,6 @@ export class UserService {
 
   /**
    * @description 根据 userId 查询 user
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {number} id
    * @returns {Observable<User>}
@@ -65,7 +63,6 @@ export class UserService {
 
   /**
    * @description 根据 username 查询 user
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {string} username
    * @returns {Observable<User>}
@@ -78,7 +75,6 @@ export class UserService {
 
   /**
    * @description 新建一个用户
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {User} user
    * @returns {Observable<User>}
@@ -94,7 +90,6 @@ export class UserService {
 
   /**
    * @description 修改某个用户的信息
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {User} user
    * @returns {Observable<User>}
@@ -107,7 +102,6 @@ export class UserService {
 
   /**
    * @description delete a user by object user
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {User} user
    * @returns {Observable<{}>}
@@ -120,7 +114,6 @@ export class UserService {
 
   /**
    * @description delete a user by userid
-   * @author Wu Kexin
    * @date 2018-12-15
    * @param {number} userId
    * @returns {Observable<{}>}
@@ -138,9 +131,8 @@ export class UserService {
 
   /**
    * @description 获取新建用户的ID
-   * @author Wu Kexin
    * @date 2018-12-18
-   * @returns {string}
+   * @returns {string} A new userId
    * @memberof UserService
    */
   createNewUserId(): string {

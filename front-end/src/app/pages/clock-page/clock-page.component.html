@@ -30,4 +30,27 @@
     </nz-tab>
   </nz-tabset>
 
+  <nz-tabset *ngIf="currentUserPosition">
+    <nz-tab nzTitle="员工记录">
+    <nz-table #basicTable [nzData]="datas" [nzPageSize]="10" >
+      <thead >
+        <tr>
+          <th>Id</th>
+          <th>Time</th>
+          <th>Mood</th>
+          <th>isLate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of datas">
+          <td>{{data.id}}</td>
+          <td>{{data.time}}</td>
+          <td>{{data.mood}}</td>
+          <td>{{data.isLate}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </nz-tab>
+  </nz-tabset>
+
 </div>

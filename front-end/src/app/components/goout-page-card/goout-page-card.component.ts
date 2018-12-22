@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Out } from 'src/app/domain/out';
+import {Component, Input, OnInit} from '@angular/core';
+import {Out} from 'src/app/domain/out';
 
+// * @author Sun Qisong
 @Component({
   selector: 'app-goout-page-card',
   templateUrl: './goout-page-card.component.html',

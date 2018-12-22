@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthGuard } from "../../auth/auth.guard";
-import { AuthService } from "../../services/auth.service";
-import { Subscription } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {AuthGuard} from "../../auth/auth.guard";
+import {AuthService} from "../../services/auth.service";
+import {Subscription} from 'rxjs';
 import {User} from "../../domain/user";
 
+// * @author Fan Lishui
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

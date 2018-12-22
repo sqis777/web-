@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { Router } from "@angular/router";
-import { AuthGuard } from "../auth/auth.guard";
-
+import {Injectable} from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthGuard} from "../auth/auth.guard";
 // import { Observable, of } from 'rxjs';
 // import { tap, delay } from 'rxjs/operators';
-import { UserService } from "./user.service";
-import { NzMessageService } from 'ng-zorro-antd';
-import { User } from "../domain/user";
+import {UserService} from "./user.service";
+import {NzMessageService} from 'ng-zorro-antd';
+import {User} from "../domain/user";
 
+// * @author Song Qiqi
 @Injectable({
   providedIn: 'root',
 })

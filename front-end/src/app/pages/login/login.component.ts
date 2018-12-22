@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from "../../services/auth.service";
-import { NzMessageService } from "ng-zorro-antd";
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from "../../services/auth.service";
+import {NzMessageService} from "ng-zorro-antd";
 
+// * @author Fan Lishui
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

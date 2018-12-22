@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Leave } from "../../domain/leave";
+import {Component, Input, OnInit} from '@angular/core';
+import {Leave} from "../../domain/leave";
 import {ApproveService} from "../../services/approve.service";
 
+// * @author Fan Lishui
 @Component({
   selector: 'app-approve-leave-card',
   templateUrl: './approve-leave-card.component.html',

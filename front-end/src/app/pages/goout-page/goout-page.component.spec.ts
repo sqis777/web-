@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { GooutPageComponent } from './goout-page.component';
+import {GooutPageComponent} from './goout-page.component';
 
 describe('GooutPageComponent', () => {
   let component: GooutPageComponent;
