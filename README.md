@@ -1,5 +1,21 @@
 # web 课程大作业
 
+## 小组分工
+> 小组成员：孙琦淞 3016218180 宋琦琪 3016218178  吴可歆 3016218183 范立水 3016218053
+
+> 需求文档：孙琦淞 宋琦琪 吴可歆 范立水
+
+> 设计文档: 孙琦淞 宋琦琪 吴可歆 范立水
+
+> 代码:
+       
+       孙琦淞：annual.ts, user.ts, annual-page.component.ts, login.component.ts, annual.service.ts, user.service.ts
+
+       宋琦琪：out.ts, goout-page.component.ts, auth.service.ts, out.service.ts
+       
+       吴可歆：record.ts, clock-page.component.ts, config.service.ts, record.service.ts
+       
+       范立水：leave.ts, approve-page.component.ts, leave-page.component.ts, approve.service.ts, leave.service.ts
 ## 项目实时预览
 
 访问 [angular7-demo](https://xiaofeit.gitlab.io/angular7-demo) 查看项目的实时预览
