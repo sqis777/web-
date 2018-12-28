@@ -7,7 +7,7 @@ import {RecordService} from "../../services/record.service";
 import {Subscription} from 'rxjs';
 import {User} from "../../domain/user";
 
-// * @author Song Qiqi
+// * @author Wu Kexin
 @Component({
   selector: 'app-clock-page',
   templateUrl: './clock-page.component.html',
