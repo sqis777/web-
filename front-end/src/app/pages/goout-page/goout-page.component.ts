@@ -3,7 +3,7 @@ import {Out} from "../../domain/out";
 import {OutService} from "../../services/out.service";
 import {Subscription} from 'rxjs';
 // import { Auth}
-// * @author Wu Kexin
+// * @author Song Qiqi
 @Component({
   selector: 'app-goout-page',
   templateUrl: './goout-page.component.html',
