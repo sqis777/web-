@@ -4,7 +4,7 @@ import {Observable, Subject} from "rxjs";
 import {Leave} from "../domain/leave";
 import {ConfigService} from "./config.service";
 
-// * @author Sun Qisong
+// * @author Fan Lishui
 @Injectable({
   providedIn: 'root'
 })
