@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 import {Record} from "../domain/record";
 import {ConfigService} from "./config.service";
 
-// * @author Song Qiqi
+// * @author Wu Kexin
 @Injectable({
   providedIn: 'root'
 })
