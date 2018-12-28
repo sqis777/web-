@@ -3,7 +3,7 @@ import {Leave} from "../../domain/leave";
 import {Subscription} from 'rxjs';
 import {LeaveService} from "../../services/leave.service";
 
-// * @author Sun Qisong
+// * @author Fan Lishui
 @Component({
   selector: 'app-leave-page',
   templateUrl: './leave-page.component.html',
