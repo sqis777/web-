@@ -5,7 +5,7 @@ import {ConfigService} from "./config.service";
 
 import {Observable} from 'rxjs';
 // import { catchError, retry } from 'rxjs/operators';
-// * @author Wu Kexin
+// * @author Sun Qisong
 @Injectable({
   providedIn: 'root'
 })
