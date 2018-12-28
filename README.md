@@ -7,6 +7,8 @@
 
 > 设计文档: 孙琦淞 宋琦琪 吴可歆 范立水
 
+> 测试文档：宋琦琪 吴可歆
+
 > 代码:
        
        孙琦淞：annual.ts, user.ts, annual-page.component.ts, login.component.ts, annual.service.ts, user.service.ts
