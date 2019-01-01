@@ -13,11 +13,11 @@
        
        孙琦淞：annual.ts, user.ts, annual-page.component.ts, login.component.ts, annual.service.ts, user.service.ts,footer.ts
 
-       宋琦琪：out.ts, goout-page.component.ts, auth.service.ts, out.service.ts,navbar.ts,new-leave.ts,new-out.ts
+       宋琦琪：out.ts, goout-page.component.ts, auth.service.ts, out.service.ts,navbar.ts,new-leave.ts,new-out.ts，goout-page-card.ts
        
        吴可歆：record.ts, clock-page.component.ts, config.service.ts, record.service.ts,register.ts
        
-       范立水：leave.ts, approve-page.component.ts, leave-page.component.ts, approve.service.ts, leave.service.ts，approve-go-out-page-card.ts,approve-leave-card.ts,goout-page-card.ts
+       范立水：leave.ts, approve-page.component.ts, leave-page.component.ts, approve.service.ts, leave.service.ts，approve-go-out-page-card.ts,approve-leave-card.ts
 ## 项目实时预览
 
 访问 [angular7-demo](https://xiaofeit.gitlab.io/angular7-demo) 查看项目的实时预览
